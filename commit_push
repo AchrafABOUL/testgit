@@ -1,0 +1,12 @@
+set -e
+
+echo Please give the message of your commit
+read commit_message
+
+echo Please give the name of the feature branch
+read branch_name
+
+git add .
+git status
+git commit -m "$commit_message"
+git push origin $branch_name
